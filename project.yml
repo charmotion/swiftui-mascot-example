@@ -1,0 +1,30 @@
+name: KikoDemo
+options:
+  bundleIdPrefix: app.charmotion.examples
+  deploymentTarget:
+    iOS: "16.0"
+packages:
+  RiveRuntime:
+    url: https://github.com/rive-app/rive-ios
+    from: 6.31.0
+targets:
+  KikoDemo:
+    type: application
+    platform: iOS
+    sources:
+      - KikoDemo
+    dependencies:
+      - package: RiveRuntime
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.charmotion.examples.KikoDemo
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Kiko
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
